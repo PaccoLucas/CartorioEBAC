@@ -129,7 +129,8 @@ int main() //Função main serve como ponto de partida para a execução do programa
 	  printf("Escolha a opção deseja do menu:\n\n"); //escrever na tela 
 	  printf("\t1 - Registrar nomes\n"); //escrever na tela 
 	  printf("\t2 - Consultar nomes\n"); //escrever na tela 
-	  printf("\t3 - Deletar nomes\n\n");  //escrever na tela  
+	  printf("\t3 - Deletar nomes\n");  //escrever na tela  
+	  printf("\t4 - Sair do sistema\n\n");
 	  printf("Opção:"); //fim do menu 
 	
 	  scanf("%d",&opcao); //armazenando a escolha do usuário
@@ -151,6 +152,11 @@ int main() //Função main serve como ponto de partida para a execução do programa
 	    case 3: //se escolheu a opção 3 ir para 
 	    deletar();
 		break; //fim do comando 
+		
+		case 4:
+		printf("Obrigado por ultilizar o sistema!\n*-*");
+		return 0;
+		break;
 		
 		default: // para quando o usuario escolher alguma opção que não esteja disponivel executar o comando abaixo 
 		printf("Essa opção não está disponivel\n"); //escrever na tela 
