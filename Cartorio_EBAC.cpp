@@ -117,53 +117,70 @@ int main() //Função main serve como ponto de partida para a execução do programa
 {
 	int opcao=0; //Definindo variáveis
 	int laco=1; //Definindo repetição 
+	char senhadigitada[10]="a";
+	int comparacao;
 	
-	for(laco=1;laco=1;) 
+	setlocale(LC_ALL, "Portuguese");
+	
+	printf("*** Cartório da EBAC ***\n\n");
+	printf("Login de administrador!\n");
+	printf("Digite a senha:");
+	scanf("%s",senhadigitada);
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
 	{
 	
-	  system("cls"); //Limpar a tela 
-	  
-	  setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
-	  printf("*** Cartório da EBAC ***\n\n"); //Inicio do menu
-	  printf("Escolha a opção deseja do menu:\n\n"); //escrever na tela 
-	  printf("\t1 - Registrar nomes\n"); //escrever na tela 
-	  printf("\t2 - Consultar nomes\n"); //escrever na tela 
-	  printf("\t3 - Deletar nomes\n");  //escrever na tela  
-	  printf("\t4 - Sair do sistema\n\n");
-	  printf("Opção:"); //fim do menu 
+    	for(laco=1;laco=1;) 
+  	    {
 	
-	  scanf("%d",&opcao); //armazenando a escolha do usuário
+	     system("cls"); //Limpar a tela 
+	  
+	     setlocale(LC_ALL, "Portuguese"); //Definindo a linguagem
 	
-	  system("cls"); //limpar a tela 
+	     printf("*** Cartório da EBAC ***\n\n"); //Inicio do menu
+	     printf("Escolha a opção deseja do menu:\n\n"); //escrever na tela 
+	     printf("\t1 - Registrar nomes\n"); //escrever na tela 
+	     printf("\t2 - Consultar nomes\n"); //escrever na tela 
+	     printf("\t3 - Deletar nomes\n");  //escrever na tela  
+	     printf("\t4 - Sair do sistema\n\n");
+	     printf("Opção:"); //fim do menu 
+	
+	     scanf("%d",&opcao); //armazenando a escolha do usuário
+	
+	     system("cls"); //limpar a tela 
 	  
 	  
-	  switch(opcao)//Inicio do menu 
-	   //utiliza SE como opção para executar o comando, Exemplo: SE a opção escolhida pelo usuario for 1 execute o comando X, SE for 2 execute o comando Y, assim por diante, todas opções SE dentro da estrutura SWITCH 
-	  {
-	    case 1: //SE esxolheu a opção 1 
-	    registro(); 
-	    break; //Fim do comando 
+    	  switch(opcao)//Inicio do menu 
+	    //utiliza SE como opção para executar o comando, Exemplo: SE a opção escolhida pelo usuario for 1 execute o comando X, SE for 2 execute o comando Y, assim por diante, todas opções SE dentro da estrutura SWITCH 
+	     {
+	      case 1: //SE esxolheu a opção 1 
+	      registro(); 
+	      break; //Fim do comando 
 	    
-	    case 2: //se escolher 2 ir para 
-	    consulta();
-	    break; // fim do comando 
+	      case 2: //se escolher 2 ir para 
+	      consulta();
+	      break; // fim do comando 
 	    
-	    case 3: //se escolheu a opção 3 ir para 
-	    deletar();
-		break; //fim do comando 
+	      case 3: //se escolheu a opção 3 ir para 
+	      deletar();
+		  break; //fim do comando 
 		
-		case 4:
-		printf("Obrigado por ultilizar o sistema!\n*-*");
-		return 0;
-		break;
+	      case 4:
+		  printf("Obrigado por ultilizar o sistema!\n\n");
+		  return 0;
+		  break;
 		
-		default: // para quando o usuario escolher alguma opção que não esteja disponivel executar o comando abaixo 
-		printf("Essa opção não está disponivel\n"); //escrever na tela 
-		system("pause"); //pausa 
-		break; //fim do comando 
-	  }
+		  default: // para quando o usuario escolher alguma opção que não esteja disponivel executar o comando abaixo 
+		  printf("Essa opção não está disponivel\n"); //escrever na tela 
+		  system("pause"); //pausa 
+		  break; //fim do comando 
+	     }
 	
 	
+        }
     }
+    else 
+         printf("Senha incorreta");
 }
